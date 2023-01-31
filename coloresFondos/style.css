@@ -1,0 +1,164 @@
+/* Colores y Fondos en CSS */
+
+/* 
+    Colores:
+        Hay varias formas de dar color a los elementos
+
+        - Palabras clave https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+
+        - RGB:          Es una función de color que recibe 3 valores separados por comas, 
+                        siendo 0 el mínimo y 255 el máximo
+                        rgb(0,0,0) sería un negro y rgb(255,255,255) sería blanco.
+
+        -RGBA:          Es una variación de RGB con un cuarto valor que sería el canal alpha, 
+                        con este valor controlamos la opacidad. Sus valores van de 0 a 1, 
+                        siendo 0 transparente y 1 opaco.
+
+        - Hexadecimal:  La notación hexademal tiene 16 valores, 0-1-2-3-4-5-6-7-8-9-A-B-C-D-E-F. 
+                        Se escriben con un # al inicio y se pueden usar 3 o 6 valores. 
+                        Si se usan 6 valores deben ir en parejas #ffffff, pero cuando las parejas 
+                        tienen el mismo valor se suele obviar y se ponen solo 3 valores #fff.
+
+                        El código hexadecimal se representa con los canales rgb de esta forma #rgb o #rrggbb. 
+                        Utilizar el modo hexadecimal cuando se buscan colores especiales se queda corto si no 
+                        utilizamos un preprocesador, ya que no podemos controlar la luminosidad, la saturación, etc.
+
+                        Cuando los 3/6 valores son iguales es un color neutro, #000 sería negro y #fff blanco, y 
+                        todos los valores intermedios serían grises con mayor o menor luminosidad #666, #aaa
+                        HSL(hue, saturation, lightness): Es una función de color que nos permite controlar el tono, 
+                        la saturación y la luminosidad. Es el modo de color que se recomienda para tener un control 
+                        total sobre los colores hue es el ángulo en la rueda cromática. 
+                        Los valores van de 0 a 360 grados saturation es la intensidad del color. 
+                        
+                        Los valores van de 0 (gris) a 100% (color puro) lightness es la intensidad de la luz. 
+                        
+                        Los valores van de 0 (negro) a 100% (blanco)
+
+                        HSLA: Exactamente igual que RGBA
+
+
+
+        https://coolors.co/966b9d-c98686-f2b880-fff4ec-e7cfbc
+
+        https://htmlcolorcodes.com/es/selector-de-color/
+
+
+    Imágenes:
+
+        Sin derecho de autor 
+
+        https://unsplash.com/
+
+        https://www.pexels.com/
+
+        https://boxicons.com/
+
+    Gradientes:
+
+        https://webgradients.com/
+
+
+
+
+*/
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    color: snow;
+    text-align: center;
+    background-image: url("./images/gato0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+.box{
+width: 200px;
+height: 200px;
+border: 1px solid black;
+margin: 5px;
+margin-top: 100px;
+text-align: center;
+font-size: 30px;
+display: inline-block;
+padding-top: 80px;
+margin-bottom: 50px;
+}
+
+.box--color{
+    color: white;
+    background-color: teal;
+}
+
+.box--rgb{
+    background-color: rgb(185, 142, 185);
+    color: rgb(255, 125, 4);
+}
+
+.box--rgba{
+    background-color: rgba(255, 125, 4, 0.527);
+}
+
+.box--hexa{
+    background-color: #f0e79d;
+}
+
+.box--hsl{
+    background-color: hsl(10, 50%, 40%);
+}
+
+.box--hsla{
+    background-color: hsla(120,26%,30%,.8);
+}
+
+
+
+.box-img {
+    position: absolute;
+    left: 300px;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(245, 245, 245, 0.712);
+    border-radius: 20px;
+
+
+    background-image: url("./images/gato1.jpg");
+    background-repeat: no-repeat;
+
+    /*backgrounD: teal*/
+    /* Sobreescribe las propiedades ya que es un shorthand */
+
+    background-color: lightblue;
+    background-position: center center;
+}
+
+
+
+
+
+.box-img-2 {
+    position: relative;
+    left: 900px;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #688a7ade 0%, #5d4157af 100%), url('./images/gato2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.box-img-2 p{
+    text-align: center;
+    line-height: 500px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(214, 209, 209, 0.842);
+}

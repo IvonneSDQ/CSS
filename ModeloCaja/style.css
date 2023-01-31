@@ -1,0 +1,236 @@
+/* BOX MODEL EN CSS  */
+
+/* 
+    https://devopedia.org/images/article/289/5708.1602657423.png
+
+    https://onaircode.com/wp-content/uploads/2019/09/padding-versus-margin-1080x675.jpg
+    
+
+    Importante: Los elementos en línea no tienen medidas width y height
+
+
+
+    1.- Margin: Es la propiedad que nos permite generar espacio entre elementos 
+
+    Es un shorthand (propiedad abreviada) que controla los 4 lados posibles para dar márgenes
+
+    Margin-top:     margen superior;
+    Margin-rigt:    margen derecho;
+    Margin-bottom:  margen inferior;
+    Margin-left:    margen izquierdo;
+
+    Admiten hasta 4 valores que van en el orden de las agujas del reloj 
+    4 valores =>     margin:    top right bottom left;
+    3 valores =>     margin:    top left/right bottom;
+    2 valores =>     margin:    top/bottom left/right ;
+    1 valor   =>     margin:    top/right/bottom/left;
+
+
+
+
+    2.- Pading: Es la propiedad que nos permite generar espacio interno entre el borde y la caja 
+
+    Es un shorthand (propiedad abreviada) que controla los 4 lados posibles para dar márgenes
+
+
+    Padding-top:     paddin superior;
+    Padding-rigt:    paddin derecho;
+    Padding-bottom:  paddin inferior;
+    Padding-left:    paddin izquierdo;
+
+    Admiten hasta 4 valores que van en el orden de las agujas del reloj 
+    4 valores =>     paddin:    top right bottom left;
+    3 valores =>     paddin:    top left/right bottom;
+    2 valores =>     paddin:    top/bottom left/right ;
+    1 valor   =>     paddin:    top/right/bottom/left;
+
+
+
+
+    3.- Border: Es la propiedad que nos permite modificar el border de la caja
+
+    Es un shorthand (propiedad abreviada) que agrupa 3 propiedades 
+
+    border-width:   ancho del borde
+    border-style:   estilo del borde
+    border-color:   color del borde
+
+    Lista de estilos para el style (none hidden dotted dashed solid double groove ridge inset outset)
+
+
+
+
+    4.- Box-sizing: Es la propiedad que nos permite controlar el cálculo que hace el navegador a la hora de 
+                    modificar las propiedades content, padding y border.
+    
+    Los 2 valores que podemos darle son:
+        content-box =>  valor por defecto
+        border-box  =>  Cálculo de tamaño del elemento incluyendo el padding y el border. 
+
+
+
+*/
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: papayawhip;
+    color: black;
+    font-size: 15px;
+}
+
+
+/*  CONTENT EN CSS */
+
+.block {
+    background-color: lightcoral;
+    font-size: 25px;
+    width: 200px;
+    height: 200px;
+}
+
+.inline {
+    background-color: lightgreen;
+    font-size: 25px;
+    color: initial;
+    /* width: 200px;  No se puede aplicar al ser un elemento en línea
+    height: 200px; */
+}
+
+
+/*  MARGIN EN CSS */
+
+.block-2 {
+    background-color: lightgreen;
+    font-size: 25px;
+    width: 200px;
+    height: 200px;
+    margin: 70px 50px 60px 150px;
+}
+
+.inline-1 {
+    background-color: lightcoral;
+    font-size: 25px;
+    color: inherit;
+    /* los elemenos en línea solo tiene propiedades de left and right */
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.inline-2 {
+    background-color: lightskyblue;
+    font-size: 25px;
+    color: inherit;
+    /* los elemenos en línea solo tiene propiedades de left and right */
+    margin-left: 200px;
+    margin-right: 10px;
+}
+
+
+.block-3 {
+    /* para que funcione el auto debe tener un width */
+    width: 300px;
+    background-color: lightseagreen;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.block-4 {
+    width: 500px;
+    background-color:purple;
+    font-size: 30px;
+    margin-right: auto ;
+}
+
+.block-5 {
+    width: 500px;
+    background-color:red;
+    font-size: 30px;
+    margin-left: auto ;
+}
+
+.block-6 {
+    background-color: lightsalmon;
+    height: 200px;
+    width: 200px;
+    font-size: 30px;
+    /* siempre es recomendable quitar ese margin extra de los navegadores y se 
+    puede poner esta propiedad y valor en el body o utilizar normalize.css*/
+    margin: 0;
+}
+
+
+h1{
+    background-color: red;
+    margin: 0;
+}
+
+
+
+/*  PADDING EN CSS */
+
+.block-7 {
+    width: 500px;
+    background-color: lightskyblue;
+    color: initial;
+    font-size: 30px;
+    padding: 100px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.demo {
+    width: 850px;
+    height: 50px;
+    background-color: seagreen;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    margin-left: 20px;
+}
+
+.inline-3 {
+    color: inherit;
+    background-color: lightseagreen;
+    padding: 15px;
+    margin-left: 300px;
+
+}
+
+
+
+
+/*  BORDER EN CSS */
+
+.block-8 {
+    width: 200px;
+    background-color: lightgray;
+    color: initial;
+    font-size: 20px;
+    padding: 50px;
+    margin: auto;
+    border: 10px solid red;
+    
+    border-right-color: lightseagreen;
+    border-right-width: 5px;
+    border-style: dotted;
+}
+
+
+
+.block-9 {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: lightsteelblue;
+    color: initial;
+    font-size: 20px;
+    margin: 0 auto;
+    border: 10px solid lightpink;
+    /* box-sizing: border-box; Con esto se respeta el width y height de la caja */
+    /* Además se recomienda utilizar en el selector universal */
+
+}

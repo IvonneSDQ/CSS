@@ -1,0 +1,120 @@
+/* Textos en CSS */
+
+/* 
+    text-align: Es la propieda que nos permite alinear horizontalmente el contenido de un elemento de bloque 
+                siempre que el CONTENIDO NO TENGA ANCHO DECLARADAO
+    
+    
+    Acepta 4 valores:
+
+                text-align:left  => alinea el contenido a la izquierda 
+                text-align:right  => alinea el contenido a la derecha 
+                text-align:center  => alinea el contenido al centro 
+                text-align:justify  => alinea el contenido justificadamente, pero no se suele recomendar utilizar  
+
+*/
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+background-color: lightgoldenrodyellow;
+}
+
+
+.tituloprincial{
+margin: 0;
+border: 1px solid red;
+width: 100%;
+text-align: right;
+}
+
+
+
+article {
+box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.932);
+border-radius: 10px;
+background: lightcyan;
+padding: 40px;
+width: 600px;
+margin: 20px auto;
+text-align: center;
+font-style: italic;
+text-transform: uppercase;
+}
+
+
+.parrafo {
+text-transform: capitalize;
+margin: 15px;
+text-align: justify;
+/* Espaciados de manera horizontal */
+letter-spacing: 1px;
+word-spacing: 4px;
+/* Espaciados de manera vertical */
+line-height: 30px;
+
+}
+
+.enlace {
+/* al convertir a un elemento de bloque 
+el contenido sise puede usat text-align */
+display: block;
+text-align: right;
+
+
+text-decoration: none;
+color: rgb(206, 147, 21);
+font-size: 25px;
+font-weight: bold;
+text-transform: lowercase;
+font-weight: 200;
+}
+
+
+
+.text {
+text-align: center;
+line-height: 25px;
+}
+
+
+
+.box {
+background-color: rgba(102, 102, 102, 0.5);
+width: 100px;
+padding: 10px 0;
+margin: 50px auto;
+outline: 2px solid lightpink;
+text-align: center;
+}
+
+
+
+.link {
+color: black;
+display: block;
+margin-bottom: 20px;
+text-align: center;
+}
+
+
+
+.img {
+
+display: block;
+/* text-align: center; No sirve ya que centra el contenido  */
+/* ya que las imagenes manejan inline-block*/
+margin: 20px auto;
+margin-bottom: 20px;
+}
+
+/* Otra forma de centrar con un contenedor */
+
+.container {
+text-align: center;
+}
+

@@ -1,0 +1,81 @@
+/*  Position en CSS */
+
+/*
+    z-index => Es la propiedad que nos permite ordenar los elementos 
+    superpuestos para controlar cual se coloca por delante y cual se coloca por detras.
+
+
+    https://i.ytimg.com/vi/L58hlU1gl0M/maxresdefault.jpg
+    
+    t.ly/1pgp
+
+
+*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: lightyellow;
+
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+}
+
+
+.container {
+    width: 300px;
+    height: 300px;
+    background-color: teal;
+    position: relative;
+    /* Al colocar el z-index en el padre ya se rompe la condición
+    que el hijo siempre este detrás del padre */
+    /* z-index: 0; */
+}
+
+
+.box-1 {
+    background-color: coral;
+    position: relative;
+    left: 295px;
+    /*  1.- El hijo se coloca siempre detras del padre
+        2.- que el padre no tenga un z-index
+        3.- Utilizar valores negativos
+    */
+    z-index: -1;
+}
+
+.box-1-2 {
+    background-color: #32cd32;
+    position: relative;
+    left: 295px;
+    bottom: 20px;
+    /*  1.- El hijo se coloca siempre detras del padre
+        2.- que el padre no tenga un z-index
+        3.- Utilizar valores negativos
+    */
+    z-index: -1;
+
+}
+
+.box-2 {
+    background-color: rgb(171, 255, 122);
+    position: relative;
+    top: 50px;
+    /* Utilizar valores que no sean consecutivos*/
+    z-index: 10;
+}
+
+.box-3 {
+    background-color: rgb(122, 184, 255);
+    position: relative;
+    z-index: 100;
+}
+

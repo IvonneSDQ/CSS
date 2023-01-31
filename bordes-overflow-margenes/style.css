@@ -1,0 +1,157 @@
+/* BORDER RADIUS EN CSS  */
+
+/* 
+
+Border radius
+    Es un shorthand que engloba:
+    
+    border-top-left-radius          =>  Radio del borde superior izquierdo
+    border-top-right-radius         =>  Radio del borde superior derecho
+    border-bottom-right-radius      =>  Radio del borde inferior derecho
+    border-bottom-left-radius       =>  Radio del borde inferior izquierdo
+
+    border-radius: top-left/bottom-right top-right/bottom-left;
+    border-radius: top-left top-right/bottom-left bottom-right;
+    border-radius: top-left top-right bottom-left bottom-right;
+
+
+Outline:    
+    Es la pripiedad que nos permite dibujar un borde por fuera del modelo de caja 
+
+    Es un shorthand que engloba 
+    outline-width:  Contrla el ancho del outline  
+    outline-style:  Controla el estilo del outile
+    outline-color:  Controla el color del outline
+
+    Tiene las mismas porpiedades y sintaxis que border, pero con algunas diferencias
+        - No ocupa sitio, ya que no form parte del box-model 
+        - No se puede redonderar 
+        - No se puede controlar los lados de forma independiente 
+
+    Tiene la propiedad outline-offset que permite aumentar o disminuir la distancia del 
+    outline en relación a la caja a la que pertenece
+
+
+
+    Overflow
+
+    Es una propiedad que controla como se va a comportar la caja con el contenido que se 
+    desborde de ella
+
+    Es un shorthand que engloba overflow-x y overflow-y
+
+    Tiene 3 valores posibles:
+
+        hidden:     Oculta todo el contenido que se desborde
+        auto:       Muestra la barra de scroll solo si hace falta
+        scroll:     Muestra ambas barras de scroll independientemente de si se necesitan
+
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightsteelblue;
+}
+
+/* Estilos para bordes */
+
+.box-1 {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    background-color: mediumorchid;
+    border-radius: 80px 25px 200px 150px;
+}
+
+
+.box-2 {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    background-color: mediumslateblue;
+    /* para que funcione esto se debe tener un cuadrado perfecto */
+    border-radius: 50%;  
+
+}
+
+
+/* OVERFLOW  */
+
+.box-3 {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 50px;
+    background-color:mediumspringgreen;
+    overflow: scroll;
+
+}
+
+.text {
+    width: 350px;
+}
+
+
+
+
+.box-4 {
+    margin: 0 auto;
+    width: 310px;
+    height: 308px;
+    background-color:mediumspringgreen;
+    border-radius: 50px;
+    overflow:hidden;
+}
+
+
+.box-5, .box-6 {
+    padding: 23px;
+    background-color: lightsalmon;
+}
+
+.text1 {
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+.box-7 {
+    margin: auto;
+    margin-bottom: 50px;
+    width: 310px;
+    height: 308px;
+    background-color: lightcyan;
+    border: 35px solid  lightpink;
+    outline: 15px inset lightgreen;
+    outline-offset: 13px;
+}
+
+
+
+
+/* Colapsado de márgenes cuando se tiene un padre e hijo*/
+/* osea 2 div  */
+.header {
+    background-color: aqua;
+    height: 100px;
+
+    /* 3 formas diferentes y validas */
+    /* overflow: hidden; */
+    /* border-top: 0.1px solid aqua; */
+    padding-top: 0.1px;
+
+}
+
+.title {
+    width: 330px;
+    margin: 0 auto;
+    margin-top: 30px;
+}

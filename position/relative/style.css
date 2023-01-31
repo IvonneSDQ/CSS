@@ -1,0 +1,54 @@
+/*  Position en CSS */
+
+/*
+Los posibles valores que le podemos dar a position son:
+
+    Relative => El elemento mantendrá su posición y medidas en el flujo de renderizado 
+                y mantendrá su especio reservado. 
+                
+                Si lo movemos lo hará usando su posición 
+                en el HTML como punto de referencia. 
+
+    https://i.ytimg.com/vi/F0ifZxhlTUI/maxresdefault.jpg
+
+    https://www.csssolid.com/images/csspositions/css-position-all.png
+
+    https://i.stack.imgur.com/gz265.png
+
+*/
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: lightyellow;
+}
+
+h1 {
+    margin: 0.1px;
+    background-color: lightseagreen;
+}
+
+
+.box-1 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(170, 107, 170, 0.582);
+    position: relative;
+    top: 50px;
+    left: 260px;
+    border-radius: 80px;
+    /* bottom: 150px; Ya lo ignora por tener un top antes */
+    /* right: 150px; Ya lo ignora por tener un left antes */
+    
+}
+
+
+.box-2 {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(173, 92, 38, 0.486);
+    /* position: relative;
+    left: 250px;
+    top: 250px; */
+}
+

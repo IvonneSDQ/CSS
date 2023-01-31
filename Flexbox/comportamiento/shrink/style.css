@@ -1,0 +1,87 @@
+/* Flexbox en CSS */
+
+/* 
+    https://dev-to-uploads.s3.amazonaws.com/i/gv3jyh4xt4fbwtq1qejn.png
+
+    https://3.bp.blogspot.com/-WSU9FMQV6mg/We_w7iHuXdI/AAAAAAAAnkk/t9Pji-habf8hwTu4MDtYshPkmrD-FG89gCLcBGAs/s1600/flex-direction%2B%25281%2529.png
+
+    https://www.w3.org/TR/2012/WD-css3-flexbox-20120612/images/flex-direction-terms.svg
+
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: papayawhip;
+}
+
+h1 {
+    background-color: teal;
+    text-align: center;
+    color: white;
+    padding: 1.5rem;
+}
+
+
+
+
+
+/* Siempre que se quiera trabajar con FLEBOX se debe tener un contenedor  */
+
+
+.container {
+    width: 600px;
+    height: 600px;
+    outline: 2px solid tomato;
+    margin: 20px auto;
+
+
+    display: flex; 
+    flex-direction: row;
+}
+
+
+.item {
+    width: 200px;
+    height: 200px;
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 100px;   
+    /* https://samanthaming.gumlet.io/flexbox30/23-flex-shrink.jpg.gz */
+    /* https://res.cloudinary.com/practicaldev/image/fetch/s--TnNT8w9M--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h31qniw74ffrp4lkwitz.png */
+    
+    /* El espacio sobrante se le asigna equitativamente al o los elemento(s) hijo(s) */
+    /* por default el valor es 1 y no acepta valores negativos*/
+    /* flex-shrink: 1; */
+    
+}
+
+
+.item-1{
+    background: darkcyan;
+    flex-shrink: 0;
+}
+
+.item-2{
+    background: violet;
+    flex-shrink: 3;
+}
+
+.item-3{
+    background: brown;
+
+}
+
+
+.item-4{
+    background: slateblue;
+}

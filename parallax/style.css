@@ -1,0 +1,71 @@
+/* Práctica de gradientes en CSS */
+
+/* 
+    Efecto parallax
+
+    https://www.w3schools.com/colors/colors_gradient.asp
+
+
+*/
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.section {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+
+.home {
+    background-image: linear-gradient(-20deg, #2b5876f3 0%, #4e4376e5 100%) , url("./images/gato0.jpg");    
+}
+
+.section h2 {
+    font-size: 4rem;
+    line-height: 100vh;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.about {
+    width: 100%;
+    text-align: center;
+    padding: 5rem;
+}
+.about .parrafo {
+    padding: 2rem;
+}
+
+
+.projects {
+    height: 500px;
+    background-image: linear-gradient(-20deg, #5b8b81f3 0%, #645026af 100%) , url("./images/gato1.jpg");    
+}
+
+.projects .text {
+    line-height: 500px;
+}
+
+
+.skills {
+    height: inherit;
+    background-image: linear-gradient(-20deg, #8b5b83f3 0%, #644926af 100%) , url("./images/gato2.jpg");    
+}
+
+.skills .text {
+    line-height: 100vh;
+}
+
+

@@ -1,0 +1,230 @@
+/* Unidades de medida en HTML y CSS */
+
+/* 
+    
+    Unidades de medida absoluta =>  El tamaño se expresa en la unidad sin hacer referencia a 
+                                    otro elemento.
+
+                                    PIXELS
+
+
+    Unidades de medida relativa  =>  El tamaño es relativo a otro elemento (contenedor principal, 
+                                    elemento raíz, ancho/alto del viewport, etc.)
+
+                                    Dependen de algún otro factor (resolución, ya que son muy flexibles) 
+
+                                    %   Relativo al elemento padre
+                                    em  Relativo al tamaño de la letra del elemento 
+                                    rem Relativo al tamaño de la letra del elemento raíz 
+                                    vw  1 - 100% del ancho de la pantalla 
+                                    vh  1 - 100% del alto de la pantalla 
+    
+    Importante:
+        * Para tamaños de fuente siempre utilizar rem
+        * Para margin y padding se recomienda utiliar em
+        * Para que funcione el % siempre el contenedor debe tener un height 
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+
+.caja1 {
+    width: 400px;
+    height: 200px;
+    background-color: lightgrey;
+    margin-bottom: 20px;
+    
+    /* Referencia al tamaño raíz del navegador 16px */
+    font-size: 3rem;
+}
+
+
+
+.padre {
+    height: 150px;
+    background-color: lightblue;
+    margin-bottom: 40px;
+    font-size: 10px;
+}
+
+.caja2{
+    /* Referencia al padre que son 10px */
+    font-size: 6em;
+    background-color: lightpink;
+}
+
+
+
+.link{
+    background-color: violet;
+    color: black;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    font-size: 2rem;
+}
+
+
+
+.padre2 {
+    background-color: teal;
+    margin: 40px 0px;
+    height: 300px;
+    width: 500px;
+}
+
+
+.caja3{
+    background-color: lightgreen;
+    font-size: 3em;
+    /* Toma la referencia del padre */
+    width: 50%;
+    height: 50%;
+}
+
+
+
+
+
+
+.padre3 {
+    background-color: pink;
+    margin: 40px 0px;
+    height: 300px;
+    width: 900px;
+}
+
+
+.caja4{
+    background-color: lightblue;
+    font-size: 3em;
+    
+    margin-left: 35px;
+    /* width: 100%; */
+    /* cuando se trabaja con margenes se recomienda utilizar auto */
+    width: auto;
+    
+    height: 50%;
+}
+
+
+.padre4 {
+    background-color: goldenrod;
+    margin: 40px 0px;
+    width: 900px;
+    height: 250px;
+}
+
+
+.caja5{
+    background-color: coral;
+    font-size: 2em;
+    width: 75%;
+
+
+    /* Para que funcione el % en height el padre debe tener un ancho */
+    /* height: 25%; */
+    
+    /* También se suele recomendar que el height sea auto para 
+    que se adapta al contenido de la caja */
+    height: auto;
+}
+
+
+
+
+
+.caja6{
+    margin: 50px 0px;
+    background-color: violet;
+    height: 50vh;
+    /* Tener mucho cuidado con el scroll del navegador
+    para eso se recomienda el 100% */
+    /* width: 100vw; */
+    width: 100%;
+    font-size: 4rem;
+} 
+
+
+
+
+
+/* 
+https://www.yunbitsoftware.com/blog/2017/06/22/viewport-units-css-que-es/
+*/ 
+.caja7{
+    margin-bottom: 20px;
+    background-color: green;
+    font-size: 4rem;
+    width: 50vmax;
+    height: 50vmax;
+} 
+
+
+
+/* 
+Limitadores al ancho y alto
+    Cuando establecemos un width y/o un height con una medida que es relativa, es posible que no queramos 
+    que se respete esa medida en todos los casos.
+
+    Para ello tenemos propiedades que limitan esas medidas:
+        *   min-width: Indica el ancho minimo que puede alcanzar el elemento.
+        *   max-width: Indica el ancho máximo que puede alcanzar el elemento.
+        *   min-height: Indica el alto minimo que puede alcanzar el elemento.
+        *   max-height: Indica el alto máximo que puede alcanzar el elemento. 
+*/
+
+
+
+
+.caja8 {
+    background-color: violet;
+    margin-bottom: 25px;
+    color: black;
+
+
+    max-width: 600px;
+    min-width: 300px;
+
+    height: 50vh;
+}
+
+
+.caja9 {
+    background-color: black;
+    margin-bottom: 25px;
+    color: white;
+    width: 75%;
+    color: red;
+
+
+    min-height: 100px;
+
+    max-height: 600px;
+}
+
+
+
+.caja10 {
+    margin-top: 10px;
+    background-color:teal;
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1em;
+
+}
+
+

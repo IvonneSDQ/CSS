@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+
+
+header {
+    background-color: papayawhip;
+    text-align: center;
+}
+
+
+
+.logo {
+    display: inline-block;
+    background-color: teal;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+
+}
+
+.navbar{
+    display: inline-block;
+    background-color: teal;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 200px;
+}
+
+.background p{
+    background-color: lightblue;
+    color: initial;
+    text-align: center;
+    width: 900px;
+    margin-left: auto;
+    margin-top: 40px;
+    padding: 10px;
+}
+
+.image{
+    position: relative;
+    bottom: 100px;
+    left: 0px;
+}

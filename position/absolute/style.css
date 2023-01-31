@@ -1,0 +1,111 @@
+/*  Position en CSS */
+
+/*
+Los posibles valores que le podemos dar a position son:
+
+    Absolute => El elemento perderá sus medidas y su espaciado reservado. 
+                Si lo movemos usará el elemento padre posicionado como referencia. 
+                Si no tiene ninguno, usará el elemento HTML de referencia. 
+
+    https://i.ytimg.com/vi/F0ifZxhlTUI/maxresdefault.jpg
+
+    https://www.csssolid.com/images/csspositions/css-position-all.png
+
+    https://qph.cf2.quoracdn.net/main-qimg-59e39eff9ddceba27a8598a74edb835a-pjlq
+
+*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: lightyellow;
+
+}
+
+
+
+.titulo {
+    background-color: lightseagreen;
+    position: absolute;
+    left: 300px;
+    top: 25px;
+    
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.box-1 {
+    
+    background-color: rgb(228, 159, 102);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+.box-2 {
+
+    background-color: red;
+    position: absolute;
+    bottom: 500px;
+    left: 300px;
+}
+
+.container {
+    background-color: rgba(35, 100, 63, 0.397);
+    outline: 3px solid brown;
+    width: 400px;
+    height: 400px;
+    position: absolute; /*Siempre el contenedor debe estar posicionado*/
+    top: 450px;
+    left: 200px;
+
+}
+
+.box-3 {
+
+    background-color: rgba(194, 93, 160, 0.801);
+    position: absolute;
+
+}
+.box-4 {
+
+    background-color: rgb(182, 241, 105);
+    border-radius: 50px;
+    padding-top: 25px;
+    font-size: 55px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+}
+
+
+.link-1 {
+    background-color: cornflowerblue;
+    width: 250px;
+    left: 50px;
+    bottom: 20px;
+    position: absolute;
+    /* con esto ya no es necesario tener un display: block; para dar un width y height */
+
+}
+
+.link-2 {
+    background-color: rgb(237, 212, 100);
+    width: 200px;
+    right: 50px;
+    bottom: 20px;
+    position: absolute;
+    text-align: center;
+}
+
